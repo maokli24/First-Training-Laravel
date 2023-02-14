@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post; // just like require in native php
 
 class PostController extends Controller
 {
@@ -14,6 +15,7 @@ class PostController extends Controller
             ['id'=>4,'title'=>'Architecture','posted_by'=>'Ibrahim','created_at'=>'2020-04-28']
            
         ];
+        $postsFromDB = Post::all();
         return view('index',['posts'=>$allPosts]);
     }
 }
