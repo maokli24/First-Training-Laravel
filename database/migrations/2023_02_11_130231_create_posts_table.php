@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title',255);// string('title') by default it is 255
+            $table->string('posted_by');
             $table->timestamps();
         });
     }
